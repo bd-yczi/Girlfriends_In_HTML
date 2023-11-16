@@ -73,7 +73,7 @@ li {
   font-weight: 700;
   font-size: 20px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 /* 下划线样式 */
@@ -87,9 +87,21 @@ li {
   margin: 0 auto;
 }
 
-.waterfall img {
+.waterfall .waterfallBox {
+  overflow: hidden;
   position: absolute;
-  width: 220px;
   border-radius: 10px;
   transition: all 0.3s;
+}
+
+.waterfall img {
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+  opacity: 0;
+  width: 220px;
+  transition: all 0.5s;
+}
+
+.waterfall img:hover {
+  transform: scale(1.2);
 }

@@ -87,8 +87,11 @@ function creatImg(name, format = '.webp') {
   waterfall.innerHTML = '';
   for (let i = 0; i < 36; i++) {
     const img = document.createElement('img');
+    const div = document.createElement('div');
+    div.classList.add('waterfallBox');
     img.src = `./images/${name}/${(10000 + i + 1) + format}`;
-    waterfall.appendChild(img);
+    div.appendChild(img);
+    waterfall.appendChild(div);
     img.addEventListener('load', layout);
   }
 }
@@ -155,7 +158,7 @@ function layout() {
   }
   // 设置每张图片的位置
   for (let i = 0; i < waterfall.children.length; i++) {
-    const img = document.querySelector(`.waterfall img:nth-child(${i + 1})`);
+    const img = document.querySelector(`.waterfall div:nth-child(${i + 1})`);
     let minTop = getMinTop(nextTop);
     img.style.left = `${minTop.index * (imgWidth + info.gap)}px`;
     img.style.top = `${minTop.min + info.gap / 2}px`;
@@ -163,5 +166,6 @@ function layout() {
     nextTop[minTop.index] = nextTop[minTop.index] + img.offsetHeight + info.gap / 2;
     let maxTop = getMaxTop(nextTop);
     waterfall.style.height = maxTop.max + 'px';
+    img.children[0].style.opacity = 1;
   }
 }
