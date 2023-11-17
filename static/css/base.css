@@ -44,7 +44,7 @@ li {
 }
 
 svg {
-    margin-top: -13px;
+  margin-top: -13px;
 }
 
 .box .prev {
@@ -73,7 +73,7 @@ svg {
 .nav ul li {
   float: left;
   margin: 0 25px;
-  border-bottom: 4.1px solid transparent;
+  border-bottom: 4px solid transparent;
   font-weight: 700;
   font-size: 20px;
   cursor: pointer;
@@ -82,7 +82,7 @@ svg {
 
 /* 下划线样式 */
 .nav ul li.active {
-  border-bottom: 4.1px solid rgb(252, 96, 96);
+  border-bottom: 4px solid rgb(252, 96, 96);
 }
 
 .waterfall {
