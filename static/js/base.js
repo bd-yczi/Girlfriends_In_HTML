@@ -3,11 +3,11 @@ const li = document.querySelectorAll('.box ul li');
 for (let i = 0; i < li.length; i++) {
   if (i < 9) {
     li[i].style.background = `url(images/zcy/1000${i + 1}.webp) no-repeat center/cover`;
-  }else {
-    if(i < 100) {
+  } else {
+    if (i < 100) {
       li[i].style.background = `url(images/zcy/100${i + 1}.webp) no-repeat center/cover`;
-    }else {
-      if(i < 1000) {
+    } else {
+      if (i < 1000) {
         li[i].style.background = `url(images/zcy/10${i + 1}.webp) no-repeat center/cover`;
       }
     }
@@ -132,9 +132,11 @@ function layout() {
       column: column,
     };
   }
+
   let info = getinfo();
   let nextTop = new Array(info.column);
   nextTop.fill(0);
+
   // 求一维数组的最小值
   function getMinTop(nextTop) {
     let min = nextTop[0], index = 0;
@@ -149,6 +151,7 @@ function layout() {
       index: index,
     };
   }
+
   // 求一维数组的最大值
   function getMaxTop(nextTop) {
     let max = nextTop[0], index = 0;
@@ -163,6 +166,7 @@ function layout() {
       index: index,
     };
   }
+
   // 设置每张图片的位置
   for (let i = 0; i < waterfall.children.length; i++) {
     const img = document.querySelector(`.waterfall img:nth-child(${i + 1})`);
