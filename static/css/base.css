@@ -43,14 +43,18 @@ li {
   cursor: pointer;
 }
 
+svg {
+    margin-top: -13px;
+}
+
 .box .prev {
   left: 45px;
-  padding-left: 13px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .box .next {
   right: 45px;
-  padding-left: 19px;
 }
 
 .box .prev:hover,

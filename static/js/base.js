@@ -1,7 +1,17 @@
 // 加载轮播图的图片
 const li = document.querySelectorAll('.box ul li');
 for (let i = 0; i < li.length; i++) {
-  li[i].style.background = `url(images/zcy/1000${i + 1}.webp) no-repeat center/cover`;
+  if (i < 9) {
+    li[i].style.background = `url(images/zcy/1000${i + 1}.webp) no-repeat center/cover`;
+  }else {
+    if(i < 100) {
+      li[i].style.background = `url(images/zcy/100${i + 1}.webp) no-repeat center/cover`;
+    }else {
+      if(i < 1000) {
+        li[i].style.background = `url(images/zcy/10${i + 1}.webp) no-repeat center/cover`;
+      }
+    }
+  }
 }
 
 const ul = document.querySelector('.box ul');
