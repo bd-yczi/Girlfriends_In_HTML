@@ -2,13 +2,13 @@
 const li = document.querySelectorAll('.box ul li');
 for (let i = 0; i < li.length; i++) {
   if (i < 9) {
-    li[i].style.background = `url(images/zcy/1000${i + 1}.webp) no-repeat center/cover`;
+    li[i].style.background = `url(static/images/郑梓妍/1000${i + 1}.webp) no-repeat center/cover`;
   } else {
     if (i < 100) {
-      li[i].style.background = `url(images/zcy/100${i + 1}.webp) no-repeat center/cover`;
+      li[i].style.background = `url(static/images/郑梓妍/100${i + 1}.webp) no-repeat center/cover`;
     } else {
       if (i < 1000) {
-        li[i].style.background = `url(images/zcy/10${i + 1}.webp) no-repeat center/cover`;
+        li[i].style.background = `url(static/images/郑梓妍/10${i + 1}.webp) no-repeat center/cover`;
       }
     }
   }
@@ -96,13 +96,13 @@ function creatImg(name, format = '.webp') {
   waterfall.innerHTML = '';
   for (let i = 10001; i < 10036; i++) {
     const img = document.createElement('img');
-    img.src = `./images/${name}/${(i + 1) + format}`;
+    img.src = `static/images/${name}/${(i + 1) + format}`;
     waterfall.appendChild(img);
     img.addEventListener('load', layout);
   }
 }
 
-creatImg('zcy');
+creatImg('郑梓妍');
 // window.addEventListener('load', layout);
 window.addEventListener('resize', layout);
 // 点击事件：冒泡
@@ -113,8 +113,7 @@ nav.addEventListener('click', function (e) {
     document.querySelector('.nav ul li.active').classList.remove('active');
     document.querySelector(`.nav ul li:nth-child(${n})`).classList.add('active');
     let name = e.target.dataset.name;
-    if (name === 'xl') creatImg(name, '.jpg');
-    else if (name === 'zcy') creatImg(name);
+    if (name === '郑梓妍') creatImg(name);
   }
 });
 
@@ -131,11 +130,11 @@ function layout() {
       column: column,
     };
   }
-
+  
   let info = getinfo();
   let nextTop = new Array(info.column);
   nextTop.fill(0);
-
+  
   // 求一维数组的最小值
   function getMinTop(nextTop) {
     let min = nextTop[0], index = 0;
@@ -150,7 +149,7 @@ function layout() {
       index: index,
     };
   }
-
+  
   // 求一维数组的最大值
   function getMaxTop(nextTop) {
     let max = nextTop[0], index = 0;
@@ -165,7 +164,7 @@ function layout() {
       index: index,
     };
   }
-
+  
   // 设置每张图片的位置
   for (let i = 0; i < waterfall.children.length; i++) {
     const img = document.querySelector(`.waterfall img:nth-child(${i + 1})`);

@@ -48,14 +48,15 @@ svg {
 
 .box .prev {
     left: 45px;
+}
+
+.box .prev, .next {
     display: inline-flex;
     align-items: center;
 }
 
 .box .next {
     right: 45px;
-    display: inline-flex;
-    align-items: center;
 }
 
 .box .prev:hover,
