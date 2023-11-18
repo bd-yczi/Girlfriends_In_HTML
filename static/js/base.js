@@ -19,7 +19,7 @@ const ul = document.querySelector('.box ul');
 // 跳转函数
 function MoveImg(num) {
   ul.style.transition = 'all 0.8s';
-  ul.style.transform = `translateX(${-num * li[0].offsetWidth}px)`;
+  ul.style.transform = `translateX(${-num * li[0].offsetWidth + 50}px)`;
 }
 
 const li_clone = li[0].cloneNode(true);
@@ -28,7 +28,7 @@ ul.appendChild(li_clone);
 const prev = document.querySelector('.box .prev');
 const next = document.querySelector('.box .next');
 
-let num = 0;
+let num = 1;
 
 // 移动到下一张
 function nextImg(num) {
@@ -54,7 +54,6 @@ prev.addEventListener('click', function () {
   if (num < 0) {
     ul.style.transition = 'none';
     ul.style.transform = `translateX(${-li.length * li[0].offsetWidth}px)`;
-    li[0].offsetWidth;
     num = li.length - 1;
   }
   MoveImg(num);
