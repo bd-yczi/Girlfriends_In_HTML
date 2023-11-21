@@ -4,32 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./我是css.css">
+  <title>SurroundedByMyGirlfriends</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-  <div class="box">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <div class="prev">&lt;</div>
-    <div class="next">&gt;</div>
+  <div class="scroll_box">
+    <section class="prev" data-name="prev">
+      <div class="img_prev"></div>
+    </section>
+    <section class="cur">
+      <div class="img_cur" data-id="1">
+        <div class="text-box">
+          <div class="cnt">
+            <h2>LIVING</h2>
+            <p>
+              Meet six beautiful women from the first perspective and embark on a romantic journey with them.
+              It's up to you to decide who comes to the end, whether it's a seductive witch, a pure girl, an intelligent
+              sister, a
+              mischievous young lady, a sexy and spicy mother, or a cold and charming CEO.
+            </p>
+            <p>
+              <a href="./homme.html" target="_blank" class="btn">TO <strong>KNOW </strong><em>MY LOVE</em></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="next" data-name="next">
+      <div class="img_next"></div>
+    </section>
   </div>
-  <div class="nav">
-    <ul>
-      <li class="active" data-id="1" data-name="zcy">郑梓妍</li>
-      <li data-id="2" data-name="xl">肖鹿</li>
-    </ul>
-  </div>
-  <div class="waterfall">
-  </div>
-  <script src="./我是js.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
