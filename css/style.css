@@ -1,0 +1,100 @@
+/* 顶部轮播图布局 */
+.box {
+  position: relative;
+  width: 100%;
+  height: 737px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.box ul {
+  display: flex;
+  width: calc(100% * 7);
+  height: 100%;
+}
+
+.box ul li {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.box .prev,
+.box .next {
+  display: none;
+  position: absolute;
+  top: calc(50% - 33px);
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.box .prev {
+  left: 45px;
+  padding-left: 13px;
+}
+
+.box .next {
+  right: 45px;
+  padding-left: 19px;
+}
+
+.box .prev:hover,
+.box .next:hover {
+  background-color: #fc6060;
+  color: rgb(255, 255, 255);
+}
+
+/* 中间导航栏布局 */
+.nav {
+  display: flex;
+  width: 80%;
+  margin: 25px auto;
+  justify-content: center;
+}
+
+.nav ul li {
+  float: left;
+  margin: 0 25px;
+  border-bottom: 4.1px solid transparent;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+/* 下划线样式 */
+.nav ul li.active {
+  border-bottom: 4.1px solid rgb(252, 96, 96);
+}
+
+/* 瀑布流布局 */
+.waterfall {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.waterfall .waterfallBox {
+  overflow: hidden;
+  position: absolute;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.waterfall img {
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+  opacity: 0;
+  width: 220px;
+  transition: all 0.5s;
+}
+
+.waterfall img:hover {
+  transform: scale(1.2);
+}
